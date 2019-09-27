@@ -1,4 +1,6 @@
 class EdgeEntry {
+    // Constructor: 1 parameter - EdgeEntry y_max
+    // Constructor: 4 parameters - Int y_max, Int x_ymin, Int delta_x, Int delta_y
     constructor(y_max, x_ymin, delta_x, delta_y) {
         if (y_max instanceof EdgeEntry) {
             this.y_max = y_max.y_max;
@@ -16,9 +18,11 @@ class EdgeEntry {
 };
 
 class EdgeList {
+    // Constructor: 0 parameters
     constructor() {
         this.first_entry = null;
     }
+    // InsertEdge: 1 parameter - EdgeEntry edge
     InsertEdge(edge) {
         let new_edge = new EdgeEntry(edge);
         if (this.first_entry === null) {
@@ -39,6 +43,7 @@ class EdgeList {
             prev_entry.next_entry = new_edge;
         }
     }
+    // RemoveCompleteEdges: 1 parameter - Int y
     RemoveCompleteEdges(y) {
         if (this.first_entry !== null) {
             let prev_entry = this.first_entry;
@@ -57,6 +62,7 @@ class EdgeList {
             }
         }
     }
+    // SortList: 0 parameters
     SortList() {
         let curr_entry = null;
         let swapped = false;
