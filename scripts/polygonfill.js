@@ -65,7 +65,7 @@ function DrawPolygon(polygon) {
     // Step 2: set y to first scan line with an entry in ET
 
 
-    // Step 3: Repeat until ET[y] is NULL and AL is NULL
+    // Step 3: Repeat until ET[y] is empty and AL is empty
     //   a) Move all entries at ET[y] into AL
     //   b) Sort AL to maintain ascending x-value order
     //   c) Remove entries from AL whose ymax equals y
